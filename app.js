@@ -1,3 +1,14 @@
+// Search books
+const searchInput = document.getElementById('searchInput');
+// Add event listener
+searchInput.addEventListener('keyup', searchNames);
+
+function searchNames() {
+  // Get value of input
+  let searchValue = document.getElementById('searchInput').value.toUpperCase();
+  
+}
+
 // Book Class: represents a book
 class Book {
   constructor(title, author, date, comments) {
@@ -17,6 +28,7 @@ class UI {
   }
 
   static addBookToList(book) {
+    console.log(book);
     const list = document.querySelector('#book-list');
 
     const row = document.createElement('tr');
